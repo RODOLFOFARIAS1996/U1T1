@@ -1,0 +1,182 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Cabecera */
+  .cabecera {
+    background-color: #f5f5f5;
+  }
+  
+  .cabecera .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Botón de menú */
+  .boton-menu {
+    background-color: #2c5777;
+    color: #000;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+  }
+  
+  /* Navegación */
+  .navegacion {
+    margin: 20px 0;
+  }
+  
+  /* Inicialmente ocultamos el menú en móviles (para que slideToggle funcione) */
+  #contenedor_menu {
+    /* No forzamos display: block aquí */
+    display: none;
+    display: flex;
+  }
+  
+  /* Estilos generales para el menú */
+  .menu {
+    list-style: none;
+    /* No usamos !important para permitir sobreescritura en media queries */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .enlace-menu {
+    display: block;
+    padding: 10px 15px;
+    color: #2c5777;
+    text-decoration: none;
+    border: 1px solid #2c5777;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .enlace-menu:hover {
+    background-color: #2c5777;
+    color: white;
+  }
+  
+  /* Contenido principal */
+  .principal {
+    margin: 40px 0;
+  }
+  
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .columna-texto,
+  .columna-imagen {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .columna-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .titulo {
+    color: #e6a800;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .subtitulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .parrafo {
+    margin-bottom: 20px;
+  }
+  
+  .boton {
+    display: inline-block;
+    background-color: #2c5777;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 3px;
+    text-transform: lowercase;
+  }
+  
+  .imagen-principal {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Pie de página */
+  .pie {
+    background-color: #2c5777;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Media Query para pantallas de escritorio (mayor a 768px) */
+  
+  
+  /* Media Query para móviles: menú vertical */
+  @media (max-width: 768px) {
+    /* En móviles, inicialmente se oculta para ser mostrado con slideToggle */
+    #contenedor_menu {
+      display: none;
+    }
+    
+    .menu {
+      flex-direction: column;
+    }
+    .boton-menu
+    {
+        display: block;
+    }
+    
+    .enlace-menu {
+      width: 100%;
+      text-align: start;
+    }
+    
+    .fila {
+      flex-direction: column-reverse;
+    }
+  }
+  

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_pullrequest</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor">
+            <div class="logo">
+                <img src="img/logo.svg" alt="Logo Pullrequest">
+            </div>
+            <button class="boton-menu" id="botonMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav class="navegacion">
+        <div class="contenedor">
+            <ul class="menu" id="contenedor_menu">
+                <li><a href="#" class="enlace-menu">Inicio</a></li>
+                <li><a href="#" class="enlace-menu">Empresa</a></li>
+                <li><a href="#" class="enlace-menu">Servicios</a></li>
+                <li><a href="#" class="enlace-menu">Clientes</a></li>
+                <li><a href="#" class="enlace-menu">Ubicacion</a></li>
+                <li><a href="#" class="enlace-menu">Contactanos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="principal">
+        <div class="contenedor">
+            <div class="fila">
+                <div class="columna-texto">
+                    <h2 class="titulo">Creacion de paginas web</h2>
+                    <h3 class="subtitulo">Curso básico de HTML5 y CSS3</h3>
+                    <p class="parrafo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptates hic animi praesentium nulla cumque aliquam optio obcaecati alias, quos voluptatem officia ullam adipisci assumenda architecto ipsa voluptate nihil totam.
+                    </p>
+                    <a href="#" class="boton">ver</a>
+                </div>
+                <div class="columna-imagen">
+                    <img src="img/foto_pullrequest.svg" alt="Programadores trabajando" class="imagen-principal">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p class="texto-pie">@hectorcetina</p>
+        </div>
+    </footer>
+
+    <!-- Funcionalidad para mostrar/ocultar menú -->
+    <script>
+        $("#botonMenu").click(function(){
+            $("#contenedor_menu").slideToggle();
+        });
+    </script>
+
+</body>
+</html>
